@@ -1,0 +1,127 @@
+head>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            background: #fffff1;
+            color: #222;
+        }
+        .container {
+  max-width: 900px;
+  margin: 0 auto; /* Centers horizontally */
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  padding: 40px 30px;
+  min-height: 100vh; /* Makes container fill full screen height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centers vertically */
+	}
+        h1, h2 {
+            color: #2c3e50;
+        }
+        nav {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+        }
+        nav button {
+            background: #2980b9;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        nav button:hover {
+            background: #3498db;
+        }
+        .tab {
+            display: none; /* Hide all tabs by default */
+        }
+        .tab.active {
+            display: block; /* Show active tab */
+        }
+		.home a {
+            color: #2980b9;
+            text-decoration: none;
+        }
+        .home a:hover {
+            text-decoration: underline;
+        }
+        .skills-list, .projects-list {
+            list-style: none;
+            padding: 0;
+        }
+        .skills-list li, .projects-list li {
+            background: #e3eafc;
+            display: inline-block;
+            margin: 6px 8px 6px 0;
+            padding: 8px 16px;
+            border-radius: 20px;
+        }
+        .contact a {
+            color: #2980b9;
+            text-decoration: none;
+        }
+        .contact a:hover {
+            text-decoration: underline;
+        }
+		.header-row {
+    display: flex;
+    justify-content: space-between; /* Aligns name left, tabs right */
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.header-row h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+nav {
+    display: flex;
+    gap: 10px; /* Adds spacing between buttons */
+}
+
+nav button {
+    background: #2980b9;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+nav button:hover {
+    background: #3498db;
+}
+project-card {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 8px;
+  background-color: #fdfdfd;
+}
+.project-card button {
+  background-color: #ffcc00;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 4px;
+
+}.projects-list li:hover {
+  background-color: #d6e0ff;
+  transition: background-color 0.3s ease;
+}
+
+/* Reduces padding on smaller screens for better mobile UX */
+@media (max-width: 600px) {
+  .container {
+    padding: 20px;
+  }
+}
+		
+    </style>
