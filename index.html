@@ -1,85 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Ivan Ramos Torres | Portfolio</title>
-	<style>
-		body {
-			font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-			margin: 0;
-			background: #f4f4f4;
-			color: #222;
-		}
-		.container {
-			max-width: 900px;
-			margin: 40px auto;
-			background: #fff;
-			border-radius: 10px;
-			box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-			padding: 40px 30px;
-		}
-		h1, h2 {
-			color: #2c3e50;
-		}
-		.bio {
-			margin-bottom: 30px;
-		}
-		.skills, .projects {
-			margin-bottom: 30px;
-		}
-		.skills-list, .projects-list {
-			list-style: none;
-			padding: 0;
-		}
-		.skills-list li, .projects-list li {
-			background: #e3eafc;
-			display: inline-block;
-			margin: 6px 8px 6px 0;
-			padding: 8px 16px;
-			border-radius: 20px;
-		}
-		.contact {
-			margin-top: 30px;
-		}
-		.contact a {
-			color: #2980b9;
-			text-decoration: none;
-		}
-		.contact a:hover {
-			text-decoration: underline;
-		}
-	</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ivan Ramos Torres | Portfolio</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            background: #fffff1;
+            color: #222;
+        }
+        .container {
+  max-width: 900px;
+  margin: 0 auto; /* Centers horizontally */
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  padding: 40px 30px;
+  min-height: 100vh; /* Makes container fill full screen height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centers vertically */
+	}
+        h1, h2 {
+            color: #2c3e50;
+        }
+        nav {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+        }
+        nav button {
+            background: #2980b9;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        nav button:hover {
+            background: #3498db;
+        }
+        .tab {
+            display: none; /* Hide all tabs by default */
+        }
+        .tab.active {
+            display: block; /* Show active tab */
+        }
+		.home a {
+            color: #2980b9;
+            text-decoration: none;
+        }
+        .home a:hover {
+            text-decoration: underline;
+        }
+        .skills-list, .projects-list {
+            list-style: none;
+            padding: 0;
+        }
+        .skills-list li, .projects-list li {
+            background: #e3eafc;
+            display: inline-block;
+            margin: 6px 8px 6px 0;
+            padding: 8px 16px;
+            border-radius: 20px;
+        }
+        .contact a {
+            color: #2980b9;
+            text-decoration: none;
+        }
+        .contact a:hover {
+            text-decoration: underline;
+        }
+		.header-row {
+    display: flex;
+    justify-content: space-between; /* Aligns name left, tabs right */
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.header-row h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+nav {
+    display: flex;
+    gap: 10px; /* Adds spacing between buttons */
+}
+
+nav button {
+    background: #2980b9;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+nav button:hover {
+    background: #3498db;
+}
+project-card {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 8px;
+  background-color: #fdfdfd;
+}
+.project-card button {
+  background-color: #ffcc00;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 4px;
+
+}.projects-list li:hover {
+  background-color: #d6e0ff;
+  transition: background-color 0.3s ease;
+}
+
+/* Reduces padding on smaller screens for better mobile UX */
+@media (max-width: 600px) {
+  .container {
+    padding: 20px;
+  }
+}
+		
+    </style>
 </head>
 <body>
-	<div class="container">
-		<h1>Ivan Ramos Torres</h1>
-		<p class="bio">Aspiring front & back end developer passionate about building impactful digital experiences. Welcome to my portfolio!</p>
-
-		<section class="skills">
-			<h2>Skills</h2>
-			<ul class="skills-list">
-				<li>HTML</li>
-				<li>CSS</li>
-				<li>JavaScript</li>
-				<li>Python</li>
-				<li>Git</li>
-			</ul>
-		</section>
-
-		<section class="projects">
-			<h2>Projects</h2>
-			<ul class="projects-list">
-				<li><strong>Project 1:</strong> My Awesome Website</li>
-				<li><strong>Project 2:</strong> Portfolio Page (this site!)</li>
-			</ul>
-		</section>
-
-		<section class="contact">
-			<h2>Contact</h2>
-			<p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
-			<p>LinkedIn: <a href="https://www.linkedin.com/" target="_blank">linkedin.com/in/yourprofile</a></p>
-		</section>
+    <div class="header-row">
+        <h1>Ivan Ramos Torres</h1>
+        <!-- Navigation buttons to switch tabs -->
+        <nav>
+		<button onclick="showTab('home')">Home</button>
+        <button onclick="showTab('skills')">Skills</button>
+        <button onclick="showTab('projects')">Projects</button>
+        <button onclick="showTab('contact')">Contact</button>
+    	</nav>
 	</div>
+	<p class="bio">Aspiring front & back end developer passionate about building impactful digital experiences. Welcome to my portfolio!</p>
+		<section id="home" class="tab active">
+            <h2>Welcome to My Portfolio Website</h2>
+            <p>Welcome to my portfolio website!</p>
+        </section>
+        <!-- Skills Tab -->
+        <section id="skills" class="tab active">
+            <h2>Skills</h2>
+            <ul class="skills-list">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>Git</li>
+            </ul>
+        </section>
+
+        <!-- Projects Tab -->
+        <section id="projects" class="tab">
+            <h2>Projects</h2>
+            <ul class="projects-list">
+                <li><strong>Project 1:</strong> My Website Welcome!</li>
+                <li><strong>Project 2:</strong> Portfolio Page (this site!)</li>
+				<li onclick="window.open('DaBurgerGuyport.html', '_blank')" style="cursor: pointer;">
+  <strong>Project 3:</strong> Burger Guy & Fries 🍟
+</li>
+            </ul>
+			<div class="project-card">
+  <h3>Burger Guy & Fries</h3>
+  <p>A playful, animated burger-themed site built with HTML & CSS, so that i can be a better Ui/UX developer</p>
+  <button onclick="window.open('DaBurgerGuyport.html', '_blank')">View Project 🍔</button>
+	</div>
+        </section>
+
+		<!-- Contact Tab -->
+		<section id="contact" class="tab">
+			<h2>Contact</h2>
+			<p class="contact">
+
+    <!-- JavaScript to handle tab switching -->
+    <script>
+        function showTab(tabId) {
+            // Hide all tabs
+            document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
+            // Show the selected tab
+            document.getElementById(tabId).classList.add('active');
+        }
+    </script>
 </body>
 </html>
