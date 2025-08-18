@@ -1,0 +1,178 @@
+<!DOCTYPE html> <!-- Declares the document type as HTML5 -->
+<html lang="en"> <!-- Sets the language of the document to English -->
+<head>
+  <meta charset="UTF-8" /> <!-- Sets character encoding to UTF-8 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Ensures responsive scaling on mobile devices -->
+  <title>Da Burger Guy & Fries</title> <!-- Title shown in browser tab -->
+
+  <!-- Font Awesome for social media icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <style>
+    /* Global styles */
+    body {
+      margin: 0;
+      font-family: Georgia, sans-serif;
+      background: #d92424; /* Red background */
+    }
+
+    /* Header and footer styling */
+    header, footer {
+      background: #111; /* Dark background */
+      color: #fff; /* White text */
+      padding: 1rem;
+      text-align: center;
+    }
+
+    /* Navigation links */
+    nav a {
+      margin: 0 1rem;
+      color: #ffda44; /* Yellow text */
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    /* White text for specific sections */
+    #order, #catering, #about, #contact, #cart, #cart-sidebar {
+      color: white;
+    }
+
+    /* Hero section with background image */
+    .hero {
+      background-image: url('Burgerandfriesstock.jpg'); /* Background image */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      color: white;
+      padding: 7rem 5rem;
+      text-align: center;
+      font-size: 3rem;
+      text-shadow: 0 0 .75px rgba(0, 0, 0, 10); /* Slight shadow for readability */
+    }
+
+    /* Logo image styling */
+    .logo-img {
+      width: 175px;
+      height: auto;
+      cursor: pointer;
+      scroll-behavior: smooth;
+    }
+
+    /* Logo link positioning */
+    .logo-link {
+      display: inline-block;
+      position: fixed;
+      top: 1rem;
+      left: 1rem;
+      z-index: 1000; /* Keeps logo above other elements */
+    }
+
+    /* Section layout */
+    .section {
+      padding: 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    /* Menu item styling (not used with static image but kept for reference) */
+    .menu-item {
+      border-bottom: 1px solid #ccc;
+      padding: 1rem 0;
+      color: black;
+    }
+
+    .menu-item h3 {
+      margin: 0.2rem 0;
+    }
+
+    /* Menu section styling */
+    #menu {
+      display: block;
+      margin: 0 auto;
+      padding: 1rem 0;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Header with logo and navigation -->
+  <header>
+    <a href="#top" class="logo-link">
+      <img src="dalogo.png" alt="Logo" class="logo-img">
+    </a>
+    <div id="top"></div>
+    <h1>Da Burger Guy & Fries</h1>
+    <nav>
+      <a href="#menu">Menu</a>
+      <a href="#order">Order</a>
+      <a href="#about">About Da Guy</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero section with tagline -->
+  <section class="hero">
+    <div>
+      <h2>Hot, Juicy, and Delivered Late</h2>
+      <p class="bold-georgia">Craving burgers? We pull up with the flavor.</p>
+    </div>
+  </section>
+
+  <!-- Static menu image section -->
+  <section id="menu" class="section">
+    <h2>Menu</h2>
+    <img src="DaNewMenuv2.jpg" alt="Static Menu"
+         style="width:100%; max-width:800px; border: 5px solid #333; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.1);" />
+  </section>
+
+  <!-- Order section -->
+  <section id="order" class="section cta">
+    <h2>Order Online</h2>
+    <p>Fast delivery near campus. Open 2PM – 2AM.</p>
+    <a href="#">Start Your Order</a>
+  </section>
+
+  <!-- About section -->
+  <section id="about" class="section">
+    <h2>About Da Burger Guy</h2>
+    <p>"Da Burger Guy & Fries is your neighborhood Spot for fire burgers and crispy fries and cheese fries! No dine-in, no drama. We’re a ghost kitchen serving up heat with every bite, sliding through with stacked burgers, loaded fries, and drinks to match!"</p>
+  </section>
+
+  <!-- Catering section -->
+  <section id="catering" class="section">
+    <h2>Catering & Group Orders</h2>
+    <p>Need food for a dorm party, club event, or all-night study sesh? We got you. Hit us up for group discounts and late-night catering that keeps the squad fed and happy.</p>
+    <a href="#contact">Get in Touch</a>
+  </section>
+
+  <!-- Contact section -->
+  <section id="contact" class="section">
+    <h2>Contact Us</h2>
+    <p>Email: support@daburgerguy.com</p>
+    <p>Follow us:
+      <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="#" target="_blank"><i class="fab fa-tiktok"></i></a>
+      <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+    </p>
+  </section>
+
+  <!-- Cart section -->
+  <section id="cart" class="section">
+    <!-- Cart Button -->
+    <div id="cart-tab" onclick="toggleCart()">🛒 Cart (<span id="cart-count">0</span>)</div>
+
+    <!-- Cart Sidebar -->
+    <div id="cart-sidebar">
+      <h2>Your Cart</h2>
+      <div id="cart-items"></div>
+      <button onclick="checkout()">Checkout</button>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Da Burger Guy & Fries</p>
+    <p><a href="#">Privacy Policy</a> | <a href="#">Terms & Conditions</a></p>
+  </footer>
+</body>
+</html>
